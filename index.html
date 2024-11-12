@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bhumika BCom Study Material</title>
+        <style>
+            /* Global Styles */
+            body {
+                font-family: 'Helvetica Neue', Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #f8f9fc;
+                color: #444;
+                line-height: 1.6;
+                animation: backgroundFadeIn 2s ease-out;
+                overflow-x: hidden;
+                scroll-behavior: smooth; /* Smooth scrolling */
+            }
+    
+            h1 {
+                font-size: 3rem;
+                color: #fff;
+                text-align: center;
+                margin: 0;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                animation: slideIn 1s ease-out;
+                text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+            }
+    
+            p, ul {
+                font-size: 1.1rem;
+                line-height: 1.8;
+            }
+    
+            a {
+                text-decoration: none;
+                color: #007bff;
+                font-weight: bold;
+                transition: all 0.3s ease;
+            }
+    
+            a:hover {
+                color: #0056b3;
+                text-decoration: underline;
+            }
+    
+            /* Header */
+            header {
+                background: linear-gradient(45deg, #007bff, #004085);
+                color: #fff;
+                padding: 50px 0;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+                animation: headerSlideIn 1.5s ease-out;
+                text-align: center;
+            }
+    
+            footer {
+                /* background: #2196F3; */
+                background: linear-gradient(45deg, #007bff, #004085);
+                color: #fff;
+                padding: 30px 0;
+                text-align: center;
+                animation: footerBounce 1s ease-out infinite alternate;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+                border-top: 4px solid #007bff;
+            }
+    
+            footer p {
+                margin: 0;
+                font-size: 1.2rem;
+            }
+    
+            /* Main Content */
+            main {
+                max-width: 1200px;
+                margin: 40px auto;
+                padding: 20px;
+                background-color: #fff;
+                border-radius: 12px;
+                box-shadow: 0 6px 40px rgba(0, 0, 0, 0.1);
+                opacity: 0;
+                animation: fadeInUp 1.5s forwards;
+            }
+    
+            section {
+                margin-bottom: 40px;
+                padding: 20px;
+                border-radius: 12px;
+                background-color: #f9f9f9;
+                box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                animation: sectionFadeIn 1s ease-out forwards;
+            }
+    
+            section:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            }
+    
+            section h2 {
+                font-size: 2.2rem;
+                color: #333;
+                margin-bottom: 15px;
+                text-transform: capitalize;
+                letter-spacing: 1px;
+            }
+    
+            /* Image hover effect */
+            section img {
+                width: 100%;
+                height: auto;
+                max-width: 350px;
+                margin: 20px auto;
+                border-radius: 8px;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+    
+            section img:hover {
+                transform: scale(1.1); /* Slight zoom-in effect */
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            }
+    
+            /* Card-style Button */
+            .btn {
+                display: inline-block;
+                padding: 12px 30px;
+                background-color: #007bff;
+                color: white;
+                border-radius: 50px;
+                font-size: 1rem;
+                font-weight: bold;
+                text-align: center;
+                transition: all 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+                margin: 10px 0;
+            }
+    
+            .btn:hover {
+                background-color: white;
+                transform: translateY(-3px); /* Lifts the button */
+                box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            }
+    
+            .btn:active {
+                transform: translateY(2px); /* Button press effect */
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            }
+    
+            /* Note Styles */
+            .note {
+                background-color: #e7f3fe;
+                border-left: 6px solid #2196F3;
+                padding: 15px;
+                margin-top: 20px;
+                font-style: italic;
+                font-size: 1.1rem;
+            }
+    
+            /* Responsive Design */
+            @media (max-width: 768px) {
+                header {
+                    padding: 30px 0;
+                }
+    
+                h1 {
+                    font-size: 2.5rem;
+                }
+    
+                section h2 {
+                    font-size: 1.8rem;
+                }
+    
+                main {
+                    padding: 15px;
+                }
+    
+                ul li {
+                    font-size: 1rem;
+                }
+    
+                .btn {
+                    padding: 10px 20px;
+                    font-size: 0.9rem;
+                }
+            }
+    
+            /* Animations */
+            @keyframes backgroundFadeIn {
+                0% {
+                    background-color: #f8f9fc;
+                }
+                100% {
+                    background-color: #f8f9fc;
+                }
+            }
+    
+            @keyframes headerSlideIn {
+                0% {
+                    transform: translateY(-50px);
+                    opacity: 0;
+                }
+                100% {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+            }
+    
+            @keyframes slideIn {
+                0% {
+                    transform: translateX(-100px);
+                    opacity: 0;
+                }
+                100% {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+            }
+    
+            @keyframes fadeInUp {
+                0% {
+                    transform: translateY(50px);
+                    opacity: 0;
+                }
+                100% {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+            }
+    
+            @keyframes sectionFadeIn {
+                0% {
+                    opacity: 0;
+                }
+                100% {
+                    opacity: 1;
+                }
+            }
+    
+            @keyframes footerBounce {
+                0% {
+                    transform: translateY(0);
+                }
+                50% {
+                    transform: translateY(-5px);
+                }
+                100% {
+                    transform: translateY(0);
+                }
+            }
+        </style>
+    </head>
+    
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Bhumika BCom Study Material</h1>
+    </header>
+
+    <main>
+        <section>
+            <div class="note">
+             <p style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ; font-size: larger;text-align: center;"> You Can Do It, I know You Can, I Believe In You. 🐹
+             </p>
+            
+             </div>
+        </section>
+        <!-- Income tax law and practice Section -->
+        <section>
+            <h2>❗Income tax law and practice❗</h2>
+            <img src="./portfolio.jpg" alt="Income tax law and practice">
+            <ul>
+                <li><a href="https://youtube.com/playlist?list=PLkx3skvPbvt6X8R8GP1WFiq29Czf5PL_x" target="_blank" class="btn">Income Tax Law And Practice Playlist 1</a></li>
+                <li><a href="https://youtube.com/playlist?list=PLtH4TWR-sztUR1EsL41dldxWv2gg_vCC9" target="_blank" class="btn">Income Tax Law And Practice Playlist 2</a></li>
+                <li><a href="https://youtube.com/playlist?list=PLkx3skvPbvt5zSJYmH9aZBUZKEvp2x4gL" target="_blank" class="btn">Income Tax Law And Practice Important Questions/Topics And PYQ </a></li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <!-- business economics Section -->
+        <section>
+            <h2>❗business economics❗</h2>
+            <img src="./business eco.jpg" alt="business economics">
+            <ul>
+                <li><a href="https://youtube.com/playlist?list=PLv9IAhUL6JO4es3nX0cTHLEJZ6ajtpLoF" target="_blank" class="btn">Business Economics Unit 1 And Imp. Questions</a></li>
+                <li><a href="https://youtube.com/playlist?list=PLkx3skvPbvt5ADhJbDxSs7yeNsToA25Di" target="_blank" class="btn">Business Economics Unit 2 And Imp. Questions</a></li>
+                <li><a href="https://youtube.com/playlist?list=PLkx3skvPbvt6tOQiPirAeRr6VAiYXAWru" target="_blank" class="btn">Business Economics Unit 3 And Imp. Questions</a></li>
+                <li><a href="https://youtube.com/playlist?list=PLkx3skvPbvt6_dKXKD3aHwrMq8SgnLbK0" target="_blank" class="btn">Business Economics Unit 4 And Imp. Questions</a></li>
+                <li><a href="https://youtube.com/playlist?list=PLkx3skvPbvt7ZilGoZCilbh2ZWUfCtmC5" target="_blank" class="btn">Business Economics Unit 5 And Imp. Questions</a></li>
+            </ul>
+            <div class="note">
+                <p style="text-transform: capitalize;">Note: This Subject Took A Lot Of Time, As I Had To watch multiple videos to compare the creators content with the topics given in our syllabus. It was time-consuming because some videos were missing key topics, while others felt too lifeless in their explanations, some of them didn't fully cover the necessary topics, but I've gathered all the essential content in this playlists, which may be helpful for you. if you get any type of trouble in finding any specific topics, don't hesitate to let me know. I'll keep improving the playlists over time, with updates added directly to the playlist. </p>
+            </div>
+            <!-- <ul>
+                <li><a href="https://youtu.be/55qzaLmEwi8" target="_blank" class="btn">Cost Account IGNU</a></li>
+                <li><a href="https://youtu.be/FhkRuZOUuc4" target="_blank" class="btn">Cost Account IGNU Important Questions</a></li>
+            </ul> -->
+        </section>
+
+        <hr>
+
+        <!-- management accounting Section -->
+        <section>
+            <h2>❗management accounting❗</h2>
+            <img src="./management accounting.jpg" alt="management accounting">
+            
+            <ul>
+                <li><a href="https://youtube.com/playlist?list=PLkx3skvPbvt5Nxs2nXh2_1kZUkds3KJop" target="_blank" class="btn">Management Accounting</a></li>
+                <li><a href="https://youtube.com/playlist?list=PLkx3skvPbvt58MX6tN1GrHsZllc950ijE&si=txfLa5gkcas4vuyx" target="_blank" class="btn">Management Accounting One Shots Units</a></li>
+                <!-- <li><a href="https://youtu.be/z7Rtonu6ZFw" target="_blank" class="btn">International Business One Shot Revision</a></li> -->
+                <!-- <li><a href="https://youtu.be/yNmewwimmbA" target="_blank" class="btn">International Business Important Questions</a></li> -->
+            </ul>
+        </section>
+
+        <hr>
+
+        <!-- Personality Development Communication Section -->
+        <section>
+            <h2>❗sec committee: personality development communication❗</h2>
+            <img src="./personality-development-and-communication-book-2nd-semester.jpg" alt="personality-development-and-communication-">
+            <ul>
+                <li><a href="https://youtu.be/JEzPTkdfAbY?si=O7fVAajm7vOsII8X" target="_blank" class="btn">Personality Development And Communication Unit 1</a></li>
+                <li><a href="https://youtu.be/m7kmD_iChSI?si=fMxZxqxMDT4NImfc" target="_blank" class="btn">Personality Development And Communication Unit 2</a></li>
+                <li><a href="https://youtu.be/g78ibmMqEBM?si=m9ym256cWRaNAXxK" target="_blank" class="btn">Personality Development And Communication Unit 3</a></li>
+                <li><a href="https://youtu.be/-GNl-AIweBc?si=12dHIwCn27kHJZV_" target="_blank" class="btn">Personality Development And Communication Unit 4</a></li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <!-- organizational behaviour Section -->
+        <section>
+            <h2>❗commerce: organizational behaviour❗</h2>
+            <img src="./organizational-behavior-9d705b2e75d34e4e9816a34509e360ed.jpg" alt="organizational-behavior">
+            <ul>
+                <li><a href="https://youtube.com/playlist?list=PLkx3skvPbvt5kDqFXrWbNeNLJlamoBSoW&si=nhmiATOXFyVIlgG2" target="_blank" class="btn">Organisational Behaviour One Shot</a></li>
+                <li><a href="https://youtube.com/playlist?list=PLkx3skvPbvt6eBR9mSbBeFOe7Z4TCTTPU&si=dUsZUY7vBSplLS4x" target="_blank" class="btn">Organisational Behaviour Important Questions And Topics</a></li>
+                <li><a href="https://youtube.com/playlist?list=PLkx3skvPbvt47WIT5s93B-XVbqrYwefn9&si=TeYpd7E_HyYGlWe2" target="_blank" class="btn">Organisational Behaviour Previous Year Question Paper And Eaxm Pattern</a></li>
+            </ul>
+            <div class="note">
+                <p>Note: "This is an easy concept to understand, but it's a bit lengthy. If you got "</p>
+            </div>
+        </section>
+
+        <hr>
+
+        <!-- English: Literature and Human Rights Section -->
+        <section>
+            <h2>❗english: literature and human rights❗</h2>
+            <img src="./English.jpg" alt="English Literature and human rights">
+            <ul>
+                <li><a href="https://youtu.be/7gyNTGXOed0?si=StwK-AYGxvDFWAO2" target="_blank" class="btn">1948 by George Orwell</a></li>
+                <li><a href="https://youtube.com/playlist?list=PLkx3skvPbvt5K2VMNG3vKP6o8ZGFwzAJI&si=N8-5QhTSVcP9_hil" target="_blank" class="btn">To Kill A Mockingbird By Harper Lee</a> </li>
+                <li><a href="https://youtu.be/n1l_u12Tx8c?si=pmIkDBf6QnultJ8K" target="_blank" class="btn">In The Prison Of Repose By Paulo Coelho</a></li>
+                <li><a href="https://youtu.be/ww8UkoASLRU?si=EjeeCKgEvGajZFi7" target="_blank" class="btn">Amnesty By Nadine Gordimer</a></li>
+                <li><a href="https://youtu.be/1vZwV5NKgSI?si=Hm6SOCTEMBYp5HA1" target="_blank" class="btn">ABC Antidote By Ishmael Beah</a></li>
+                <li><a href="https://youtube.com/playlist?list=PLkx3skvPbvt5fqyCfUW2nHloR6MW8yVRO&si=r_6xNkte97P1JQJZ" target="_blank" class="btn">I Know Why The Caged Bird Sings By Maya Angelou</a></li>
+                <li><a href="https://youtu.be/dITQbTjvAIs?si=ZAJeQVE1IcRXy3za" target="_blank" class="btn">June Millicent Jordan Poem About My Rights</a></li>
+            </ul>
+        </section>
+        <section>
+            <div class="note">
+             <p style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ; font-size: larger;text-align: center; text-transform: capitalize;"> 
+                So, we've reached the end of the study material. It may not be perfect, but Iv'e given you everything I could. This is all I can do right now, and i really wish i could do more, like i used to when we were together.i wish i could be there with you standing by your side ,walking with you to the exam center, waiting for you until it's over, and taking you home afterward. i wish i could be there with you in every moment of your life standing by your side holding your hands tight, to help you one more time, to make you smile again, to hear you laugh, or even to make you mad at me again like i used to do it... hamster, i can't even say "my" hamster anymore idk why but i still want to say it, dumbo... anyways i'm always gonna be watching over you from the shadows, i'm always gonna protect you, i'm always be by your side in spirit, supporting you in ways you may never even know. at last i just want to say you "daisuki da yo"... which means... nah nah i am not gonna tell you, but i really mean it so much more than anything.... ayee... mai yahi hu humesha tere sath. 
+             </p>
+            
+             </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>ALL THE BEST FOR YOUR EXAMS KIDOO 🐹</p>
+        <p style="text-transform: uppercase;"> I Believe in you champ ✨ </p>
+        <p style="text-transform: uppercase;">daisuki da you 🤍
+        </p>
+    </footer>
+
+</body>
+</html>
